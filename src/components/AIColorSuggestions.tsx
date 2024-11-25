@@ -70,27 +70,6 @@ export function AIColorSuggestions({ onSuggest, onThemeColors }: AIColorSuggesti
 
   return (
     <div className="flex flex-col sm:flex-row items-center gap-4">
-      <div className="relative">
-        <input
-          type="text"
-          value={theme}
-          onChange={(e) => setTheme(e.target.value)}
-          placeholder="Enter a theme (e.g., ocean, forest)"
-          className="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-400 min-w-[250px]"
-          onKeyPress={(e) => {
-            if (e.key === 'Enter') {
-              generateThemeColors();
-            }
-          }}
-        />
-        <button
-          onClick={generateThemeColors}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-indigo-600 text-white p-2 rounded-md hover:bg-indigo-700 transition-colors"
-        >
-          <Sparkles className="w-4 h-4" />
-        </button>
-      </div>
-      
       <button
         onClick={onSuggest}
         className="flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg shadow-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"

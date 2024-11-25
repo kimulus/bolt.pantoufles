@@ -54,7 +54,13 @@ function App() {
           selectedPattern={selectedPattern}
           onPatternSelect={setSelectedPattern}
         /> */}
-        
+                  
+        <div className="mt-6 flex justify-center">
+          <AIColorSuggestions 
+            onSuggest={suggestColors}
+            onThemeColors={handleThemeColors}
+          />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <KnittingPreview
@@ -63,13 +69,7 @@ function App() {
               onSectionClick={handleSectionClick}
               selectedSection={selectedSection}
             />
-            
-            <div className="mt-6 flex justify-center">
-              <AIColorSuggestions 
-                onSuggest={suggestColors}
-                onThemeColors={handleThemeColors}
-              />
-            </div>
+  
           </div>
           
           <div className="space-y-6">
