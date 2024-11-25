@@ -19,7 +19,7 @@ export function PatternSelector({ selectedPattern, onPatternSelect }: PatternSel
         }`}
       >
         <Shirt className="w-5 h-5" />
-        <span>Sweater</span>
+        <span>Sweaterr</span>
       </button>
       <button
         onClick={() => onPatternSelect('scarf')}
