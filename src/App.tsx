@@ -47,7 +47,7 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-800 text-center mb-8">
-          Knitting Color Visualizer
+          Tekno-Triko
         </h1>
 
         {/* <PatternSelector
