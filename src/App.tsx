@@ -9,7 +9,7 @@ import { sectionPalettes } from './data/palettes';
 
 function App() {
   const [selectedPattern, setSelectedPattern] = useState<PatternType>('pantouffle');
-  const [selectedSection, setSelectedSection] = useState<string | null>(null);
+  const [selectedSection, setSelectedSection] = useState<string | null>('section-top');
   const [sectionColors, setSectionColors] = useState<Record<string, string>>({});
 
   const handleSectionClick = (id: string) => {
@@ -91,38 +91,11 @@ function App() {
               </div>
             )}
             
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                Pattern Guide
-              </h3>
-              <ul className="space-y-2 text-gray-600">
-                {patterns[selectedPattern].sections.map(section => (
-                  <li key={section.id}>
-                    • {section.name}: {getPaletteDescription(section.paletteType)}
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
-
-function getPaletteDescription(type: string) {
-  switch (type) {
-    case 'main':
-      return 'Classic, solid base colors';
-    case 'accent':
-      return 'Complementary accent colors';
-    case 'trim':
-      return 'Subtle, coordinating trim colors';
-    case 'collar':
-      return 'Light, neutral tones';
-    default:
-      return '';
-  }
 }
 
 export default App;
