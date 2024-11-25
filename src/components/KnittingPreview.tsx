@@ -102,7 +102,7 @@ export function KnittingPreview({
               d={section.path}
               fill={sectionColors[section.id] || '#FFFFFF'}
               stroke={selectedSection === section.id ? '#000000' : '#5A5A5A'}
-              strokeWidth="4"
+              strokeWidth="2"
               className="cursor-pointer transition-colors duration-200 hover:opacity-90"
               onClick={() => onSectionClick(section.id)}
             />
