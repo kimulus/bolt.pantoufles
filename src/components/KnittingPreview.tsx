@@ -110,7 +110,7 @@ export function KnittingPreview({
         </svg>
       </div>
 
-      <ColorSummary pattern={pattern} sectionColors={sectionColors} />
+      {/* <ColorSummary pattern={pattern} sectionColors={sectionColors} /> */}
 
       <div className="flex justify-center">
         <button
